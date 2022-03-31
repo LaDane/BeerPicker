@@ -84,7 +84,6 @@ function App() {
 			</div>
 
 			<h1 className="center-text impact">Found {findFood ? searchFood.length : searchName.length} beers</h1>
-			<br />
 
 			<BeerList beers={findFood ? searchFood : searchName} findFood={findFood} />
 		</div>
