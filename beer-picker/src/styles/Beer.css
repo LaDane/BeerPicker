@@ -4,8 +4,8 @@
 
 .a-narrow {
 	margin-top: 20px;
-	font-family: "Arial Narrow Light", sans-serif;
-	font-size: 12px;
+	font-family: "Arial", sans-serif;
+	font-size: 11px;
 }
 
 .beer-container {
@@ -43,7 +43,7 @@
 }
 
 .beer-container:hover > .dp {
-	opacity: 0.9;
+	opacity: 0.95;
 	transform: translateY(0);
 }
 

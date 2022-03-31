@@ -7,6 +7,15 @@ const Beer = ({ beer, findFood }) => {
 		<div className="beer-container">
 			<div className="dp">
 				<br />
+				{findFood ? (
+					<p>
+						<strong>Matching foods for this beer</strong>
+					</p>
+				) : (
+					<p>
+						<strong>Beer description</strong>
+					</p>
+				)}
 				{!findFood ? (
 					<p className="a-narrow">{beer.description}</p>
 				) : (
