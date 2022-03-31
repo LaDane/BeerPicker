@@ -2,17 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/Beer.css";
 
-const Beer = ({ beer }) => {
+const Beer = ({ beer, findFood }) => {
 	return (
 		<div className="beer-container">
+			<div className="dp">
+				<br />
+				{!findFood ? (
+					<p className="a-narrow">{beer.description}</p>
+				) : (
+					beer.food_pairing.map((food) => {
+						return (
+							<p className="a-narrow" key={food}>
+								{food}
+							</p>
+						);
+					})
+				)}
+			</div>
 			<div className="beer-header">
 				<div className="vertical-align">
-					<h3 className="beer-title">{beer.name}</h3>
+					<p className="beer-title impact">{beer.name}</p>
 				</div>
 			</div>
 			<br />
 			<img src={beer.image_url} alt="" />
-			<p>{beer.id}</p>
+			<br />
+			<br />
 		</div>
 	);
 };

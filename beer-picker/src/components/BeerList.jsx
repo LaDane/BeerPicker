@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import Beer from "./Beer";
 import "../styles/Beer.css";
 
-const BeerList = ({ beers }) => {
+const BeerList = ({ beers, findFood }) => {
 	return (
 		<div className="beer-list">
 			{beers.map((beer) => {
-				return <Beer key={beer.id} beer={beer} />;
+				return <Beer key={beer.id} beer={beer} findFood={findFood} />;
 			})}
 		</div>
 	);

@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.center-text {
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.center-checkbox {
+	position: relative;
+	width: 600px;
+	height: 85px;
+	top: 50%;
+	left: 50%;
+	margin-top: 50px;
+	margin-left: -310px;
+	border-radius: 50px;
+	text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center-search {
+	position: relative;
+	width: 600px;
+	height: 85px;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -300px;
+	border-radius: 50px;
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title-box {
+	background-color: #e2d274;
+	font-size: xx-large;
+
+	position: relative;
+	width: 600px;
+	height: 85px;
+	/* top: 50%; */
+	left: 50%;
+	/* margin-top: -100px; */
+	margin-left: -300px; /* Negative half of width. */
+	border-radius: 50px;
+	box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.6);
+	/* border: 5px solid rgb(160, 150, 12); */
 }
 
-.App-link {
-  color: #61dafb;
+.impact {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Light", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Radio Boxes */
+label.custom-radio-button input[type="radio"] {
+	opacity: 0;
+}
+
+label.custom-radio-button input[type="radio"] ~ .helping-el {
+	background-color: #ffffff;
+	border: 2px solid #e2d274;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 7px;
+	padding: 11px;
+	position: relative;
+	top: 3px;
+}
+
+label.custom-radio-button input[type="radio"]:checked ~ .helping-el {
+	border: 2px solid #e2d274;
+}
+
+label.custom-radio-button input[type="radio"]:checked ~ .helping-el:after {
+	background-color: #e2d274;
+	border-radius: 50%;
+	content: " ";
+	font-size: 33px;
+	height: 16px;
+	left: 3px;
+	position: absolute;
+	top: 3px;
+	width: 16px;
+}
+
+/* Search Input */
+div.input-block {
+	position: relative;
+}
+div.input-block input {
+	font-weight: 500;
+	font-size: 1.6rem;
+	color: #495055;
+	width: 500px;
+	padding: 15px 15px;
+	border-radius: 1rem;
+	border: 2px solid #d9d9d9;
+	outline: none;
+}
+div.input-block span.placeholder {
+	position: absolute;
+	margin: 17px 0;
+	padding: 0 4px;
+	font-family: Roboto, sans-serif;
+	color: #6c757d;
+	display: flex;
+	align-items: center;
+	font-size: 1.6rem;
+	top: 0;
+	left: 50px;
+	transition: all 0.2s;
+	transform-origin: 0% 0%;
+	background: none;
+	pointer-events: none;
+}
+div.input-block input:valid + span.placeholder,
+div.input-block input:focus + span.placeholder {
+	transform: scale(0.8) translateY(-30px);
+	background: #fff;
+}
+div.input-block input:focus {
+	color: #284b63;
+	border-color: #284b63;
+}
+div.input-block input:focus + span.placeholder {
+	color: #284b63;
+}
+
+.search-box {
+	margin: auto;
+	width: 50%;
 }
